@@ -1,7 +1,7 @@
 simulink_name = 'simulink_benchmark';
 
 %% Load data and parameters
-params_name = 'mdl_parameters_int';
+params_name = 'mdl_parameters';
 load(['support', filesep, params_name, '.mat'])
 
 %% Parameters
@@ -78,11 +78,3 @@ clear W_height W_width R_height R_width b_height b_width
 
 %% Open simulink
 open([simulink_name, '.slx'])
-
-if res_mdl_params.useOnlyIntegral
-    set_param([simulink_name, '/Plant model/Yarn model'], ...
-        'ReferencedSubsystem', 'yarn_model_int');
-else
-    set_param([simulink_name, '/Plant model/Yarn model'], ...
-        'ReferencedSubsystem', 'yarn_model');
-end

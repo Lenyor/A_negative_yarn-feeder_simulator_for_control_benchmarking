@@ -22,7 +22,7 @@ for i = 1 : N_trials
     % Generate the noise affecting the optical sensors
     % To ensure repeatability, we use the same noise for both the winding
     % and unwinding dynamics
-    % Particularly, we can gen easily generate xi_out directly from
+    % Particularly, we can easily generate xi_out directly from
     % v_tilde_out, which is available
     xi_in = pseudo_bernoulli(v_tilde_out.Data, p_in);
     xi_in = timeseries(xi_in, timevec);
