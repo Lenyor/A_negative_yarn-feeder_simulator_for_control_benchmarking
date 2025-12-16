@@ -154,7 +154,7 @@ for i = 1 : N_trials
         'Location', 'best')
     grid on
     title(trial_names{i})
-    ylim([min([omega_in_min, omega_in_bar_min]), max([omega_in_max, omega_in_bar_max])])
+    ylim([min([omega_in_min_lb, omega_in_bar_min]), max([omega_in_max_ub, omega_in_bar_max])])
 end
 
 %% Visualization (4)
